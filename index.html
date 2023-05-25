@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c4676865b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                   <li><a href="#contact">contact</a></li>
+                   <i class="fas fa-times" onclick="closemenu()"></i>
+                
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>FULL STACK DEVELOPER</p>
+                <h1>Hi,I'm<br> <span>SRIDEVI<br> DASARI</span><br> from<br> INDIA</h1>
+            </div>
+        </div>
+    </div>
+<!-------------------------about------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img3.jpg">
+
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hiiii,I'm SRIDEVI B.tech student in the stream of computer science and engineering.Iam a dedicated and experienced web developer with a passion for creating user friendly web applications.Throughout my career,I have gained proficiency in a wide range of technologies,including html,css,JavaScript,React,Node.js,Express.js and databases such as MYSQL and MongoDB.
+                        
+                    </p>
+                    <div class="tab-titles"></div>
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links"onclick="opentab('education')">education</p>
+                    <p class="tab-links"onclick="opentab('learned')">learned</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>FULL STACK DEVELOPER</span><br> Designing Web Interfaces</li>
+                        <li><span>FRENT END DEVELOPER</span><br> Html,css,JavaScript</li>
+                        <li><span>BACK END DEVELOPER</span><br> MongoDB,MYSQL,node.js,express.js</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents"id="education">
+                    <ul>
+                        <li><span>2023-Currently</span><br> engineering 3rd year IN Computer Science</li>
+                        <li><span>2020-2024</span><br> engineerimg at RGUKT-SKLM</li>
+                        <li><span>2018-2020</span><br> pre-university course at RGUKT-SKLM</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents"id="learned">
+                    <ul>
+                        <li><span>web technologies</span><br> HTML<br>css<br>javascript<br>MongoDB</li>
+                        <li><span>programming languages</span><br> python<br>c</li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------services-->
+
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>by using the Html,CSS,JavaScript,node.js,express.js,react creating a websites in effective way.
+                </p>
+            </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+
+
+    <!------contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>
+                        sridevidasari2002.02@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone-square-alt"></i>8790966607</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-telegram"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="images/sridevi  resume_compressed.pdf" download class="btn btn2">Dowload Resume</a>
+
+
+                </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">Hello</span>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @sridevi.<i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+        
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+            
+        }
+        </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzs8PEio85ebjfsO3yvfxzVADqWjZeVPm56IPn37NLhjtXsAlxLTHAluErp1iEr0Atq/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
